@@ -1,0 +1,13 @@
+name: test-self-hosted-runner
+on: push
+
+jobs:
+  smoke:
+    runs-on: [self-hosted, linux]
+    steps:
+      - name: Smoke test
+        run: |
+          whoami
+          hostname
+          uname -a
+          date
