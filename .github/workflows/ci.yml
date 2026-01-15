@@ -1,3 +1,4 @@
+- run: echo "hello from runner" > hello.txt
 name: test-self-hosted-runner
 on: push
 
