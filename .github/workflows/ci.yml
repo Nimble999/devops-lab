@@ -1,4 +1,4 @@
-- run: echo "hello from runner" > hello.txt
+
 name: test-self-hosted-runner
 on: push
 
@@ -12,3 +12,9 @@ jobs:
           hostname
           uname -a
           date
+      - name: Create hello.txt
+        run: |
+          echo "hello from runner" > hello.txt
+          pwd
+          ls -la
+          cat hello.txt
